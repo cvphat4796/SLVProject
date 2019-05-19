@@ -15,12 +15,13 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $table = 'user';
+    protected $table = 'tableName';
 
-    protected $primaryKey  = 'UserId';
+    protected $primaryKey  = '';
     
-    public $incrementing = false;
-    public $timestamps = false;
+    public $incrementing = false; //disable inscrement id
+
+    public $timestamps = false; //disable column updated_at and created_at
 
     protected $fillable = [
         'userId',

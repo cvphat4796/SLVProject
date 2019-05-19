@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model {
 
-    protected $table = 'role';
+    protected $table = '';
 
-    protected $primaryKey  = 'RoleId';
+    protected $primaryKey  = '';
     
     public $incrementing = false;
     public $timestamps = false;
