@@ -8,16 +8,38 @@ use App\Services\Interfaces\IRoleService;
 use App\Repositories\Interfaces\IUserRepository;
 
 use App\Models\MessageResponse;
+use App\Models\Role;
 
 class UserService implements IUserService {
 
     protected $roleService;
     protected $userRepo;
+    protected $roleRepo;
 
-    public function __construct(IRoleService $roleService, IUserRepository $userRepo){
+    public function __construct(IRoleService $roleService, IUserRepository $userRepo, IRoleRepository $roleRepo){
        
         $this->roleService = $roleService;
         $this->userRepo = $userRepo;
+        $this->roleRepo = $roleRepo;
+    }
+
+    public function getAllRole()
+    {
+        $result = new MessageResponse();
+
+        try
+        {
+            $users = Role::first(); //$this->roleRepo->all();
+            $result->success = true;
+            $result->result = $users[0];
+        }
+        catch(\Exception $e)
+        {
+            $result->success = false;
+            $result->error = $e->getMessage();
+        }
+        
+        return  $result;
     }
 
     public function getAllUser(){

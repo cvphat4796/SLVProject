@@ -4,17 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model {
+class Role extends BaseModel {
 
-    protected $table = '';
+    protected $collection = 'users';
 
-    protected $primaryKey  = '';
+    // protected $table = '';
+
+    // protected $primaryKey  = '';
     
-    public $incrementing = false;
-    public $timestamps = false;
+    // public $incrementing = false;
+    // public $timestamps = false;
 
-    protected $fillable = [
-        'roleId',
-        'roleName'
-     ];
+    // protected $fillable = [
+    //     'roleId',
+    //     'roleName'
+    //  ];
 }

@@ -2,51 +2,51 @@
 
 namespace App\Models;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+// use Illuminate\Notifications\Notifiable;
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
+// use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    // use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $table = 'tableName';
+    // /**
+    //  * The attributes that are mass assignable.
+    //  *
+    //  * @var array
+    //  */
+    // protected $table = 'tableName';
 
-    protected $primaryKey  = '';
+    // protected $primaryKey  = '';
     
-    public $incrementing = false; //disable inscrement id
+    // public $incrementing = false; //disable inscrement id
 
-    public $timestamps = false; //disable column updated_at and created_at
+    // public $timestamps = false; //disable column updated_at and created_at
 
-    protected $fillable = [
-        'userId',
-        'user_Phone',
-        'userRole',
-        'userEmail',
-        'userAddress'
-     ];
+    // protected $fillable = [
+    //     'userId',
+    //     'user_Phone',
+    //     'userRole',
+    //     'userEmail',
+    //     'userAddress'
+    //  ];
 
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    // /**
+    //  * The attributes that should be hidden for arrays.
+    //  *
+    //  * @var array
+    //  */
+    // protected $hidden = [
+    //     'password', 'remember_token',
+    // ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // /**
+    //  * The attributes that should be cast to native types.
+    //  *
+    //  * @var array
+    //  */
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    // ];
 }

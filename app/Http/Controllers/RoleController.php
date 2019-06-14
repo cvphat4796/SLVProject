@@ -17,7 +17,9 @@ class RoleController extends BaseController
     }
 
     public function getAllRole(){
-        $role = $this->roleService->roleService();
+        // phpinfo();
+        // dd();
+        $role = $this->roleService->getAllRole();
         
         if($role->success)
         {
